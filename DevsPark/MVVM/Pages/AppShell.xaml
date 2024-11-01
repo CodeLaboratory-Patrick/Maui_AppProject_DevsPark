@@ -13,6 +13,17 @@
     xmlns:utilities="clr-namespace:DevsPark.Utilities">
     
     <ShellContent ContentTemplate="{DataTemplate nightAdventures:NightDuneBuggy}" />
+    <ShellContent ContentTemplate="{DataTemplate nightAdventures:StarGazing}" />
+    <ShellContent ContentTemplate="{DataTemplate oasisFun:CamelRides}" />
+    <ShellContent ContentTemplate="{DataTemplate oasisFun:OasisPools}" />
+    <ShellContent ContentTemplate="{DataTemplate icyTreats:FrozenDrinksBar}" />
+    <ShellContent ContentTemplate="{DataTemplate icyTreats:IceCreamWorld}" />
+    <ShellContent ContentTemplate="{DataTemplate snowActivities:IceSculptures}" />
+    <ShellContent ContentTemplate="{DataTemplate snowActivities:Snowboarding}" />
+    <ShellContent ContentTemplate="{DataTemplate beachAttractions:SurfLessons}" />
+    <ShellContent ContentTemplate="{DataTemplate beachAttractions:WavePool}" />
+    <ShellContent ContentTemplate="{DataTemplate jungleAdventures:AnimalShows}" />
+    <ShellContent ContentTemplate="{DataTemplate jungleAdventures:ZipLines}" />
     
     
 </Shell>
