@@ -1,4 +1,6 @@
-﻿namespace DevsPark
+﻿using DevsPark.MVVM.Pages;
+
+namespace DevsPark
 {
     public partial class App : Application
     {
