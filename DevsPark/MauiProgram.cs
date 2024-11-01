@@ -13,6 +13,9 @@ namespace DevsPark
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("Kanit-Regular.ttf", "Kanit");
+                    fonts.AddFont("Kanit-Bold.ttf", "KanitB");
+                    fonts.AddFont("fontello.ttf", "Icons");
                 });
 
 #if DEBUG
