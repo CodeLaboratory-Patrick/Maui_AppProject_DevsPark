@@ -12,8 +12,22 @@
     xmlns:snowActivities="clr-namespace:DevsPark.MVVM.Pages.Frozen.SnowActivities"
     xmlns:utilities="clr-namespace:DevsPark.Utilities">
     
-    <ShellContent ContentTemplate="{DataTemplate nightAdventures:NightDuneBuggy}" />
-    <ShellContent ContentTemplate="{DataTemplate nightAdventures:StarGazing}" />
+    <ShellContent Title="Night Dune Buggy" ContentTemplate="{DataTemplate nightAdventures:NightDuneBuggy}">
+        <ShellContent.Icon>
+            <FontImageSource
+                FontFamily="Icons"
+                Glyph="{x:Static utilities:IconFont.Night_dune_buggy}"
+                Color="Black" />
+        </ShellContent.Icon>
+    </ShellContent>
+    <ShellContent Title="Star Gazing" ContentTemplate="{DataTemplate nightAdventures:StarGazing}">
+        <ShellContent.Icon>
+            <FontImageSource
+                FontFamily="Icons"
+                Glyph="{x:Static utilities:IconFont.Star_gazing}"
+                Color="Black" />
+        </ShellContent.Icon>
+    </ShellContent>
     <ShellContent ContentTemplate="{DataTemplate oasisFun:CamelRides}" />
     <ShellContent ContentTemplate="{DataTemplate oasisFun:OasisPools}" />
     <ShellContent ContentTemplate="{DataTemplate icyTreats:FrozenDrinksBar}" />
