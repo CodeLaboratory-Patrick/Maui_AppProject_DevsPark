@@ -17,7 +17,7 @@
             <FontImageSource
                 FontFamily="Icons"
                 Glyph="{x:Static utilities:IconFont.Night_dune_buggy}"
-                Color="Black" />
+                Color="{StaticResource IconColor}" />
         </ShellContent.Icon>
     </ShellContent>
     <ShellContent Title="Star Gazing" ContentTemplate="{DataTemplate nightAdventures:StarGazing}">
@@ -25,19 +25,88 @@
             <FontImageSource
                 FontFamily="Icons"
                 Glyph="{x:Static utilities:IconFont.Star_gazing}"
-                Color="Black" />
+                Color="{StaticResource IconColor}" />
         </ShellContent.Icon>
     </ShellContent>
-    <ShellContent ContentTemplate="{DataTemplate oasisFun:CamelRides}" />
-    <ShellContent ContentTemplate="{DataTemplate oasisFun:OasisPools}" />
-    <ShellContent ContentTemplate="{DataTemplate icyTreats:FrozenDrinksBar}" />
-    <ShellContent ContentTemplate="{DataTemplate icyTreats:IceCreamWorld}" />
-    <ShellContent ContentTemplate="{DataTemplate snowActivities:IceSculptures}" />
-    <ShellContent ContentTemplate="{DataTemplate snowActivities:Snowboarding}" />
-    <ShellContent ContentTemplate="{DataTemplate beachAttractions:SurfLessons}" />
-    <ShellContent ContentTemplate="{DataTemplate beachAttractions:WavePool}" />
-    <ShellContent ContentTemplate="{DataTemplate jungleAdventures:AnimalShows}" />
-    <ShellContent ContentTemplate="{DataTemplate jungleAdventures:ZipLines}" />
-    
+    <ShellContent Title="Camel Rides" ContentTemplate="{DataTemplate oasisFun:CamelRides}">
+        <ShellContent.Icon>
+            <FontImageSource
+                FontFamily="Icons"
+                Glyph="{x:Static utilities:IconFont.Camel_rides}"
+                Color="{StaticResource IconColor}" />
+        </ShellContent.Icon>
+    </ShellContent>
+    <ShellContent Title="Oasis Pools" ContentTemplate="{DataTemplate oasisFun:OasisPools}">
+        <ShellContent.Icon>
+            <FontImageSource
+                FontFamily="Icons"
+                Glyph="{x:Static utilities:IconFont.Oasis_pools}"
+                Color="{StaticResource IconColor}" />
+        </ShellContent.Icon>
+    </ShellContent>
+    <ShellContent Title="Frozen Drinks" ContentTemplate="{DataTemplate icyTreats:FrozenDrinksBar}">
+        <ShellContent.Icon>
+            <FontImageSource
+                FontFamily="Icons"
+                Glyph="{x:Static utilities:IconFont.Frozen_drinks_bar}"
+                Color="{StaticResource IconColor}" />
+        </ShellContent.Icon>
+    </ShellContent>
+    <ShellContent Title="Ice Cream World" ContentTemplate="{DataTemplate icyTreats:IceCreamWorld}">
+        <ShellContent.Icon>
+            <FontImageSource
+                FontFamily="Icons"
+                Glyph="{x:Static utilities:IconFont.Ice_cream_world}"
+                Color="{StaticResource IconColor}" />
+        </ShellContent.Icon>
+    </ShellContent>
+    <ShellContent Title="Ice Sculptures" ContentTemplate="{DataTemplate snowActivities:IceSculptures}">
+        <ShellContent.Icon>
+            <FontImageSource
+                FontFamily="Icons"
+                Glyph="{x:Static utilities:IconFont.Ice_sculptures}"
+                Color="{StaticResource IconColor}" />
+        </ShellContent.Icon>
+    </ShellContent>
+    <ShellContent Title="Snowboarding" ContentTemplate="{DataTemplate snowActivities:Snowboarding}">
+        <ShellContent.Icon>
+            <FontImageSource
+                FontFamily="Icons"
+                Glyph="{x:Static utilities:IconFont.Snowboarding}"
+                Color="{StaticResource IconColor}" />
+        </ShellContent.Icon>
+    </ShellContent>
+    <ShellContent Title="Surf Lessons" ContentTemplate="{DataTemplate beachAttractions:SurfLessons}">
+        <ShellContent.Icon>
+            <FontImageSource
+                FontFamily="Icons"
+                Glyph="{x:Static utilities:IconFont.Surf_lessons}"
+                Color="{StaticResource IconColor}" />
+        </ShellContent.Icon>
+    </ShellContent>
+    <ShellContent Title="Wave Pool" ContentTemplate="{DataTemplate beachAttractions:WavePool}">
+        <ShellContent.Icon>
+            <FontImageSource
+                FontFamily="Icons"
+                Glyph="{x:Static utilities:IconFont.Wave_pool}"
+                Color="{StaticResource IconColor}" />
+        </ShellContent.Icon>
+    </ShellContent>
+    <ShellContent Title="Animal Shows" ContentTemplate="{DataTemplate jungleAdventures:AnimalShows}">
+        <ShellContent.Icon>
+            <FontImageSource
+                FontFamily="Icons"
+                Glyph="{x:Static utilities:IconFont.Animal_shows}"
+                Color="{StaticResource IconColor}" />
+        </ShellContent.Icon>
+    </ShellContent>
+    <ShellContent Title="Zip Lines" ContentTemplate="{DataTemplate jungleAdventures:ZipLines}">
+        <ShellContent.Icon>
+            <FontImageSource
+                FontFamily="Icons"
+                Glyph="{x:Static utilities:IconFont.Zip_lines}"
+                Color="{StaticResource IconColor}" />
+        </ShellContent.Icon>
+    </ShellContent>
     
 </Shell>
