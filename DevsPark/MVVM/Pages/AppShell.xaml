@@ -87,12 +87,33 @@
                     TextColor="White"
                     VerticalOptions="Center" />
                 <Rectangle
+                    x:Name="background"
                     Grid.ColumnSpan="2"
                     Fill="White"
                     Opacity=".1" />
+
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter TargetName="background" Property="Rectangle.Fill" Value="White" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter TargetName="background" Property="Rectangle.Fill" Value="Black" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+                
             </Grid>
         </DataTemplate>
     </Shell.ItemTemplate>
+
 
     <FlyoutItem Title="Desert Mirage">
         <!--<FlyoutItem Title="Desert Mirage" FlyoutDisplayOptions="AyMultipleItems / AsSingleItem">-->
