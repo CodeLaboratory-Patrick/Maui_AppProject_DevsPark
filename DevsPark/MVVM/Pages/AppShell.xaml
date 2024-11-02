@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <Shell
     x:Class="DevsPark.MVVM.Pages.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -11,39 +12,48 @@
     xmlns:oasisFun="clr-namespace:DevsPark.MVVM.Pages.DesertMirage.OasisFun"
     xmlns:snowActivities="clr-namespace:DevsPark.MVVM.Pages.Frozen.SnowActivities"
     xmlns:utilities="clr-namespace:DevsPark.Utilities">
-    
-    <ShellContent Title="Night Dune Buggy" ContentTemplate="{DataTemplate nightAdventures:NightDuneBuggy}">
-        <ShellContent.Icon>
+
+    <FlyoutItem Title="Desert Mirage">
+        <FlyoutItem.Icon>
             <FontImageSource
                 FontFamily="Icons"
-                Glyph="{x:Static utilities:IconFont.Night_dune_buggy}"
+                Glyph="{x:Static utilities:IconFont.Desert_mirage}"
                 Color="{StaticResource IconColor}" />
-        </ShellContent.Icon>
-    </ShellContent>
-    <ShellContent Title="Star Gazing" ContentTemplate="{DataTemplate nightAdventures:StarGazing}">
-        <ShellContent.Icon>
-            <FontImageSource
-                FontFamily="Icons"
-                Glyph="{x:Static utilities:IconFont.Star_gazing}"
-                Color="{StaticResource IconColor}" />
-        </ShellContent.Icon>
-    </ShellContent>
-    <ShellContent Title="Camel Rides" ContentTemplate="{DataTemplate oasisFun:CamelRides}">
-        <ShellContent.Icon>
-            <FontImageSource
-                FontFamily="Icons"
-                Glyph="{x:Static utilities:IconFont.Camel_rides}"
-                Color="{StaticResource IconColor}" />
-        </ShellContent.Icon>
-    </ShellContent>
-    <ShellContent Title="Oasis Pools" ContentTemplate="{DataTemplate oasisFun:OasisPools}">
-        <ShellContent.Icon>
-            <FontImageSource
-                FontFamily="Icons"
-                Glyph="{x:Static utilities:IconFont.Oasis_pools}"
-                Color="{StaticResource IconColor}" />
-        </ShellContent.Icon>
-    </ShellContent>
+        </FlyoutItem.Icon>
+        <ShellContent Title="Night Dune Buggy" ContentTemplate="{DataTemplate nightAdventures:NightDuneBuggy}">
+            <ShellContent.Icon>
+                <FontImageSource
+                    FontFamily="Icons"
+                    Glyph="{x:Static utilities:IconFont.Night_dune_buggy}"
+                    Color="{StaticResource IconColor}" />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Star Gazing" ContentTemplate="{DataTemplate nightAdventures:StarGazing}">
+            <ShellContent.Icon>
+                <FontImageSource
+                    FontFamily="Icons"
+                    Glyph="{x:Static utilities:IconFont.Star_gazing}"
+                    Color="{StaticResource IconColor}" />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Camel Rides" ContentTemplate="{DataTemplate oasisFun:CamelRides}">
+            <ShellContent.Icon>
+                <FontImageSource
+                    FontFamily="Icons"
+                    Glyph="{x:Static utilities:IconFont.Camel_rides}"
+                    Color="{StaticResource IconColor}" />
+            </ShellContent.Icon>
+        </ShellContent>
+        <ShellContent Title="Oasis Pools" ContentTemplate="{DataTemplate oasisFun:OasisPools}">
+            <ShellContent.Icon>
+                <FontImageSource
+                    FontFamily="Icons"
+                    Glyph="{x:Static utilities:IconFont.Oasis_pools}"
+                    Color="{StaticResource IconColor}" />
+            </ShellContent.Icon>
+        </ShellContent>
+    </FlyoutItem>
+
     <ShellContent Title="Frozen Drinks" ContentTemplate="{DataTemplate icyTreats:FrozenDrinksBar}">
         <ShellContent.Icon>
             <FontImageSource
@@ -108,5 +118,6 @@
                 Color="{StaticResource IconColor}" />
         </ShellContent.Icon>
     </ShellContent>
-    
+
+
 </Shell>
