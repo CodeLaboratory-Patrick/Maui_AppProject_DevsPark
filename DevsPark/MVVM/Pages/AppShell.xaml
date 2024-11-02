@@ -13,6 +13,13 @@
     xmlns:snowActivities="clr-namespace:DevsPark.MVVM.Pages.Frozen.SnowActivities"
     xmlns:utilities="clr-namespace:DevsPark.Utilities">
 
+    <Shell.FlyoutIcon>
+        <FontImageSource
+            FontFamily="Icons"
+            Glyph="{x:Static utilities:IconFont.Logo}"
+            Color="{StaticResource IconColor}" />
+    </Shell.FlyoutIcon>
+
     <FlyoutItem Title="Desert Mirage">
         <FlyoutItem.Icon>
             <FontImageSource
@@ -79,7 +86,7 @@
                 Glyph="{x:Static utilities:IconFont.Frozen_kingdom}"
                 Color="{StaticResource IconColor}" />
         </FlyoutItem.Icon>
-        
+
         <Tab Title="Icy Treats">
             <Tab.Icon>
                 <FontImageSource
@@ -104,7 +111,7 @@
                 </ShellContent.Icon>
             </ShellContent>
         </Tab>
-        
+
         <Tab Title="Snow Activities">
             <Tab.Icon>
                 <FontImageSource
@@ -189,5 +196,5 @@
             </ShellContent>
         </Tab>
     </FlyoutItem>
-    
+
 </Shell>
