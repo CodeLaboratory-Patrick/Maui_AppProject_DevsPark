@@ -35,6 +35,27 @@
                 VerticalOptions="Center" />
         </Grid>
     </Shell.FlyoutHeader>
+    
+    <Shell.FlyoutFooter>
+        <Grid
+            Padding="15"
+            BackgroundColor="{StaticResource Footer}"
+            HeightRequest="100"
+            RowDefinitions="*,*">
+            <Label
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                Text="Powered by:"
+                TextColor="{StaticResource Gray600}" />
+            <Label
+                Grid.Row="1"
+                FontAttributes="Bold"
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text=".NET MAUI"
+                TextColor="{StaticResource Gray600}" />
+        </Grid>
+    </Shell.FlyoutFooter>
 
     <FlyoutItem Title="Desert Mirage">
         <FlyoutItem.Icon>
