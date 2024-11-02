@@ -11,7 +11,19 @@
     xmlns:nightAdventures="clr-namespace:DevsPark.MVVM.Pages.DesertMirage.NightAdventures"
     xmlns:oasisFun="clr-namespace:DevsPark.MVVM.Pages.DesertMirage.OasisFun"
     xmlns:snowActivities="clr-namespace:DevsPark.MVVM.Pages.Frozen.SnowActivities"
-    xmlns:utilities="clr-namespace:DevsPark.Utilities">
+    xmlns:utilities="clr-namespace:DevsPark.Utilities"
+    FlyoutBackgroundImage="park_background.png"
+    FlyoutBackgroundImageAspect="AspectFill"
+    FlyoutHeaderBehavior="Scroll">
+    <!-- also can add FlyoutHeight / FlyoutWidth / FlyoutBehavior(Disabled, Flyout, Locked) / FlyoutBackdrop /
+    FlyoutVerticalScrollMode(Auto, Disabled, Enabled) / FlyoutHeaderBehavior(CollapseOnScroll, Default, Fixed, Scroll)-->
+
+    <Shell.FlyoutBackdrop>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Offset="0.1" Color="#8A2387" />
+            <GradientStop Offset="0.6" Color="#E94057" />
+        </LinearGradientBrush>
+    </Shell.FlyoutBackdrop>
 
     <Shell.FlyoutIcon>
         <FontImageSource
@@ -19,7 +31,7 @@
             Glyph="{x:Static utilities:IconFont.Logo}"
             Color="{StaticResource IconColor}" />
     </Shell.FlyoutIcon>
-    
+
     <Shell.FlyoutHeader>
         <Grid BackgroundColor="Black" HeightRequest="150">
             <Image
@@ -35,7 +47,7 @@
                 VerticalOptions="Center" />
         </Grid>
     </Shell.FlyoutHeader>
-    
+
     <Shell.FlyoutFooter>
         <Grid
             Padding="15"
@@ -58,6 +70,7 @@
     </Shell.FlyoutFooter>
 
     <FlyoutItem Title="Desert Mirage">
+        <!--<FlyoutItem Title="Desert Mirage" FlyoutDisplayOptions="AyMultipleItems / AsSingleItem">-->
         <FlyoutItem.Icon>
             <FontImageSource
                 FontFamily="Icons"
@@ -117,6 +130,7 @@
     </FlyoutItem>
 
     <FlyoutItem Title="Frozen Kingdom">
+        <!--<FlyoutItem Title="Frozen Kingdom" FlyoutItemIsVisible="False">-->
         <FlyoutItem.Icon>
             <FontImageSource
                 FontFamily="Icons"
@@ -148,7 +162,6 @@
                 </ShellContent.Icon>
             </ShellContent>
         </Tab>
-
         <Tab Title="Snow Activities">
             <Tab.Icon>
                 <FontImageSource
@@ -233,5 +246,4 @@
             </ShellContent>
         </Tab>
     </FlyoutItem>
-
 </Shell>
