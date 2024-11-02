@@ -19,6 +19,22 @@
             Glyph="{x:Static utilities:IconFont.Logo}"
             Color="{StaticResource IconColor}" />
     </Shell.FlyoutIcon>
+    
+    <Shell.FlyoutHeader>
+        <Grid BackgroundColor="Black" HeightRequest="150">
+            <Image
+                Aspect="AspectFill"
+                Opacity=".5"
+                Source="park.jpg" />
+            <Label
+                FontFamily="KanitB"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="Devs Park"
+                TextColor="White"
+                VerticalOptions="Center" />
+        </Grid>
+    </Shell.FlyoutHeader>
 
     <FlyoutItem Title="Desert Mirage">
         <FlyoutItem.Icon>
