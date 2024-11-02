@@ -20,38 +20,56 @@
                 Glyph="{x:Static utilities:IconFont.Desert_mirage}"
                 Color="{StaticResource IconColor}" />
         </FlyoutItem.Icon>
-        <ShellContent Title="Night Dune Buggy" ContentTemplate="{DataTemplate nightAdventures:NightDuneBuggy}">
-            <ShellContent.Icon>
+
+        <Tab Title="Night Adventures">
+            <Tab.Icon>
                 <FontImageSource
                     FontFamily="Icons"
-                    Glyph="{x:Static utilities:IconFont.Night_dune_buggy}"
+                    Glyph="{x:Static utilities:IconFont.Night_adventures}"
                     Color="{StaticResource IconColor}" />
-            </ShellContent.Icon>
-        </ShellContent>
-        <ShellContent Title="Star Gazing" ContentTemplate="{DataTemplate nightAdventures:StarGazing}">
-            <ShellContent.Icon>
+            </Tab.Icon>
+            <ShellContent Title="Night Dune Buggy" ContentTemplate="{DataTemplate nightAdventures:NightDuneBuggy}">
+                <ShellContent.Icon>
+                    <FontImageSource
+                        FontFamily="Icons"
+                        Glyph="{x:Static utilities:IconFont.Night_dune_buggy}"
+                        Color="{StaticResource IconColor}" />
+                </ShellContent.Icon>
+            </ShellContent>
+            <ShellContent Title="Star Gazing" ContentTemplate="{DataTemplate nightAdventures:StarGazing}">
+                <ShellContent.Icon>
+                    <FontImageSource
+                        FontFamily="Icons"
+                        Glyph="{x:Static utilities:IconFont.Star_gazing}"
+                        Color="{StaticResource IconColor}" />
+                </ShellContent.Icon>
+            </ShellContent>
+        </Tab>
+
+        <Tab Title="Oasis Fun">
+            <Tab.Icon>
                 <FontImageSource
                     FontFamily="Icons"
-                    Glyph="{x:Static utilities:IconFont.Star_gazing}"
+                    Glyph="{x:Static utilities:IconFont.Oasis_fun}"
                     Color="{StaticResource IconColor}" />
-            </ShellContent.Icon>
-        </ShellContent>
-        <ShellContent Title="Camel Rides" ContentTemplate="{DataTemplate oasisFun:CamelRides}">
-            <ShellContent.Icon>
-                <FontImageSource
-                    FontFamily="Icons"
-                    Glyph="{x:Static utilities:IconFont.Camel_rides}"
-                    Color="{StaticResource IconColor}" />
-            </ShellContent.Icon>
-        </ShellContent>
-        <ShellContent Title="Oasis Pools" ContentTemplate="{DataTemplate oasisFun:OasisPools}">
-            <ShellContent.Icon>
-                <FontImageSource
-                    FontFamily="Icons"
-                    Glyph="{x:Static utilities:IconFont.Oasis_pools}"
-                    Color="{StaticResource IconColor}" />
-            </ShellContent.Icon>
-        </ShellContent>
+            </Tab.Icon>
+            <ShellContent Title="Camel Rides" ContentTemplate="{DataTemplate oasisFun:CamelRides}">
+                <ShellContent.Icon>
+                    <FontImageSource
+                        FontFamily="Icons"
+                        Glyph="{x:Static utilities:IconFont.Camel_rides}"
+                        Color="{StaticResource IconColor}" />
+                </ShellContent.Icon>
+            </ShellContent>
+            <ShellContent Title="Oasis Pools" ContentTemplate="{DataTemplate oasisFun:OasisPools}">
+                <ShellContent.Icon>
+                    <FontImageSource
+                        FontFamily="Icons"
+                        Glyph="{x:Static utilities:IconFont.Oasis_pools}"
+                        Color="{StaticResource IconColor}" />
+                </ShellContent.Icon>
+            </ShellContent>
+        </Tab>
     </FlyoutItem>
 
     <FlyoutItem Title="Frozen Kingdom">
