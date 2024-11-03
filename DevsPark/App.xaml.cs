@@ -8,7 +8,7 @@ namespace DevsPark
         {
             InitializeComponent();
 
-            MainPage = serviceProvider.GetRequiredService<AppShell>();
+            MainPage = serviceProvider.GetRequiredService<AppShellTabs>();
         }
     }
 }
