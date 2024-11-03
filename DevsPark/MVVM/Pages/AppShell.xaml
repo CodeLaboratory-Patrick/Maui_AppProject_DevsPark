@@ -113,6 +113,49 @@
             </Grid>
         </DataTemplate>
     </Shell.ItemTemplate>
+    
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Grid
+                ColumnDefinitions=".2*, .8*"
+                HeightRequest="75"
+                RowSpacing="0">
+                <Image
+                    HeightRequest="30"
+                    Source="{Binding FlyoutIcon}"
+                    VerticalOptions="Center" />
+                <Label
+                    Grid.Column="1"
+                    Margin="20,0,0,0"
+                    FontSize="17"
+                    Text="{Binding Title}"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+                <Rectangle
+                    x:Name="background"
+                    Grid.ColumnSpan="2"
+                    Fill="White"
+                    Opacity=".1" />
+
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter TargetName="background" Property="Rectangle.Fill" Value="White" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Selected">
+                                <VisualState.Setters>
+                                    <Setter TargetName="background" Property="Rectangle.Fill" Value="Black" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+            </Grid>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
 
 
     <FlyoutItem Title="Desert Mirage">
@@ -292,4 +335,13 @@
             </ShellContent>
         </Tab>
     </FlyoutItem>
+    
+    <MenuItem Command="{Binding HelpCommand}" Text="Help">
+        <MenuItem.IconImageSource>
+            <FontImageSource
+                FontFamily="Icons"
+                Glyph="{x:Static utilities:IconFont.Help}"
+                Color="{StaticResource IconColor}" />
+        </MenuItem.IconImageSource>
+    </MenuItem>
 </Shell>
