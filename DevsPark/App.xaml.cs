@@ -7,7 +7,8 @@ namespace DevsPark
         public App(IServiceProvider serviceProvider)
         {
             InitializeComponent();
-
+            
+            //MainPage = serviceProvider.GetRequiredService<AppShell>();
             MainPage = serviceProvider.GetRequiredService<AppShellTabs>();
         }
     }
