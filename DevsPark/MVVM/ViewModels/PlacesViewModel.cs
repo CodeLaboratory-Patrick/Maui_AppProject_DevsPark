@@ -112,11 +112,11 @@ namespace DevsPark.MVVM.ViewModels
             await Browser.Default.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
         }
         [RelayCommand]
-        public Task OpenFlyout()
+        public async Task OpenFlyout()
         {
-            //Shell.Current.FlyoutIsPresented = true;
-            IsFlyoutOpen = true;
-            return Task.CompletedTask;
+            Shell.Current.FlyoutIsPresented = true;
+            //IsFlyoutOpen = true;
+            //return Task.CompletedTask;
         }
 
         [RelayCommand]
