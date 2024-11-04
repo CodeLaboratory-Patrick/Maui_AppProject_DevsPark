@@ -19,6 +19,23 @@
     <!-- also can add FlyoutHeight / FlyoutWidth / FlyoutBehavior(Disabled, Flyout, Locked) / FlyoutBackdrop /
     FlyoutVerticalScrollMode(Auto, Disabled, Enabled) / FlyoutHeaderBehavior(CollapseOnScroll, Default, Fixed, Scroll)-->
 
+    <Shell.TitleView>
+        <Grid ColumnDefinitions=".8*,.2*">
+            <Image
+                HorizontalOptions="Center"
+                Source="logo.png"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Column="1"
+                FontFamily="Icons"
+                FontSize="20"
+                HorizontalOptions="Center"
+                Text="{x:Static utilities:IconFont.Search}"
+                TextColor="#929292"
+                VerticalOptions="Center" />
+        </Grid>
+    </Shell.TitleView>
+    
     <Shell.FlyoutBackdrop>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
             <GradientStop Offset="0.1" Color="#8A2387" />
