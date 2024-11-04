@@ -7,7 +7,10 @@
     Title="SearchView" >
 
     <Shell.SearchHandler>
-        <search:OffersSearchHandler />
+        <search:OffersSearchHandler
+            DisplayMemberName="OfferName"
+            Placeholder="Search offers"
+            ShowsResults="True" />
     </Shell.SearchHandler>
     
 </ContentPage>
