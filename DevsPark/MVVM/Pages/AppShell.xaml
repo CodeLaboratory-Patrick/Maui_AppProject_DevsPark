@@ -14,7 +14,8 @@
     xmlns:utilities="clr-namespace:DevsPark.Utilities"
     FlyoutBackgroundImage="park_background.png"
     FlyoutBackgroundImageAspect="AspectFill"
-    FlyoutHeaderBehavior="Scroll">
+    FlyoutHeaderBehavior="Scroll"
+    FlyoutIsPresented="{Binding IsFlyoutOpen}">
     <!-- also can add FlyoutHeight / FlyoutWidth / FlyoutBehavior(Disabled, Flyout, Locked) / FlyoutBackdrop /
     FlyoutVerticalScrollMode(Auto, Disabled, Enabled) / FlyoutHeaderBehavior(CollapseOnScroll, Default, Fixed, Scroll)-->
 
