@@ -122,7 +122,18 @@ namespace DevsPark.MVVM.ViewModels
         [RelayCommand]
         public async Task ShowOffers()
         {
-            throw new NotImplementedException();
+            //await Shell.Current.GoToAsync("//frozenDrinks");
+
+            await Shell.Current.GoToAsync("featuredView");
+            await Shell.Current.GoToAsync("offersView");
+
+            //await Shell.Current.GoToAsync("//iceCream");
+            //await Shell.Current.GoToAsync("details");
+
+            await Shell.Current.GoToAsync("..");
+
+
+            Shell.Current.FlyoutIsPresented = false;
         }
 
         [RelayCommand]

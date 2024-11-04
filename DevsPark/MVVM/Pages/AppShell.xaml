@@ -362,4 +362,13 @@
                 Color="{StaticResource IconColor}" />
         </MenuItem.IconImageSource>
     </MenuItem>
+    
+    <MenuItem Command="{Binding ShowOffersCommand}" Text="Offers">
+        <MenuItem.IconImageSource>
+            <FontImageSource
+                FontFamily="Icons"
+                Glyph="{x:Static utilities:IconFont.Offer}"
+                Color="{StaticResource IconColor}" />
+        </MenuItem.IconImageSource>
+    </MenuItem>
 </Shell>
