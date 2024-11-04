@@ -6,6 +6,8 @@
     xmlns:views="clr-namespace:DevsPark.MVVM.Pages"
     Title="Star Gazing"
     BackgroundColor="{StaticResource BGColor}">
+    <!--Shell.NavBarIsVisible="False"
+        Shell.TabBarIsVisible="False" -->
 
     <views:TemplateView />
 
