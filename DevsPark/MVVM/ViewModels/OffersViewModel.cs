@@ -35,9 +35,16 @@ namespace DevsPark.MVVM.ViewModels
         
         public void ApplyQueryAttributes(IDictionary<string, object> query)
         {
-            var companyId = query["id"].ToString();
-            CompanyName = Uri.UnescapeDataString(query["name"].ToString());
-            Offers = new ObservableCollection<Offer>(offersService.GetOffers(int.Parse(companyId)));
+            if(!query.ContainsKey("offers"))
+            {
+                var companyId = query["id"].ToString();
+                CompanyName = Uri.UnescapeDataString(query["name"].ToString());
+                Offers = new ObservableCollection<Offer>(offersService.GetOffers(int.Parse(companyId)));
+            }
+            else
+            {
+                Offers = query["offers"] as ObservableCollection<Offer>;
+            }
         }
     }
 }
