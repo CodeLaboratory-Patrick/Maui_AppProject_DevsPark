@@ -139,7 +139,8 @@ namespace DevsPark.MVVM.ViewModels
         [RelayCommand]
         public async Task Search()
         {
-            throw new NotImplementedException();
+            await Shell.Current.GoToAsync("//search");
+            //searchView
         }
     }
 }

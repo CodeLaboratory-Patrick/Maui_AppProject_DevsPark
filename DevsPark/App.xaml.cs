@@ -18,6 +18,7 @@ namespace DevsPark
         {
             Routing.RegisterRoute("featuredView", typeof(FeaturedView));
             Routing.RegisterRoute("offersView", typeof(OffersView));
+            //Routing.RegisterRoute("searchView", typeof(SearchView));
 
             //Routing.RegisterRoute("frozenDrinks/details", typeof(FeaturedView));
             //Routing.RegisterRoute("iceCream/details", typeof(OffersView));
