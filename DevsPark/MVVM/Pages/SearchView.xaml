@@ -10,7 +10,27 @@
         <search:OffersSearchHandler
             DisplayMemberName="OfferName"
             Placeholder="Search offers"
-            ShowsResults="True" />
+            ShowsResults="True">
+
+            <search:OffersSearchHandler.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions=".3*,.7*" RowDefinitions="*,5">
+                        <Image Source="{Binding Image}" />
+                        <Label
+                            Grid.Column="1"
+                            FontSize="14"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="{Binding OfferName}" />
+                        <Rectangle
+                            Grid.Row="1"
+                            Grid.ColumnSpan="2"
+                            Fill="#E0E0E0" />
+                    </Grid>
+                </DataTemplate>
+            </search:OffersSearchHandler.ItemTemplate>
+
+        </search:OffersSearchHandler>
     </Shell.SearchHandler>
     
 </ContentPage>
