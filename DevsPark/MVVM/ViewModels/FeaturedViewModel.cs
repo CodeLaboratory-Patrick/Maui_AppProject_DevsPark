@@ -53,7 +53,7 @@ namespace DevsPark.MVVM.ViewModels
         [RelayCommand]
         public async Task SelectionChanged()
         {
-            await Shell.Current.GoToAsync($"offersView");
+            await Shell.Current.GoToAsync($"offersView?id={selectedItem.BusinessId}&name={selectedItem.BusinessName}");
         }
     }
 }

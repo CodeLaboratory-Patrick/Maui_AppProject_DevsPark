@@ -44,8 +44,14 @@ namespace DevsPark
             builder.Services.AddTransient<ZipLines>();
             builder.Services.AddTransient<AppShell>();
             builder.Services.AddTransient<AppShellTabs>();
+            builder.Services.AddTransient<FeaturedView>();
+            builder.Services.AddTransient<OffersView>();
             
             builder.Services.AddTransient<PlacesViewModel>();
+            builder.Services.AddTransient<FeaturedViewModel>();
+            builder.Services.AddTransient<OffersViewModel>();
+            
+            builder.Services.AddSingleton<OffersService>();
             
             return builder.Build();
         }

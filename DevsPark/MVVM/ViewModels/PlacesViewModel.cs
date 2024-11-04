@@ -124,15 +124,15 @@ namespace DevsPark.MVVM.ViewModels
         {
             //await Shell.Current.GoToAsync("//frozenDrinks");
 
-            await Shell.Current.GoToAsync("featuredView");
-            await Shell.Current.GoToAsync("offersView");
+            //await Shell.Current.GoToAsync("featuredView");
+            //await Shell.Current.GoToAsync("offersView");
 
             //await Shell.Current.GoToAsync("//iceCream");
             //await Shell.Current.GoToAsync("details");
 
-            await Shell.Current.GoToAsync("..");
+            //await Shell.Current.GoToAsync("..");
 
-
+            await Shell.Current.GoToAsync($"featuredView");
             Shell.Current.FlyoutIsPresented = false;
         }
 
