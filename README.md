@@ -1,4 +1,4 @@
-# .NET MAUI Application Analysis - Maui_AppProject_DevsPark
+# .NET MAUI Application Analysis - DevsPark
 
 ## 📱 Overview
 1. **Main Page**:
