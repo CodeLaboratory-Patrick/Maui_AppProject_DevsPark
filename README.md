@@ -26,6 +26,63 @@
 ![Screenshot 2024-11-09 at 3 23 11 PM](https://github.com/user-attachments/assets/f38917ee-3587-43e3-bd09-0c9de3288e2b)
 
 ---
+
+## 📂 Core Components - Project Structure
+```markdown
+- DevsPark/
+  ├── MauiProgram.cs
+  ├── App.xaml/.cs
+  ├── MainPage.xaml/.cs
+  ├── MVVM/
+  │   ├── Models/
+  │   │   ├── FeaturedPromotion.cs
+  │   │   ├── Offer.cs
+  │   │   └── Place.cs
+  │   ├── Pages/
+  │   │   ├── DesertMirage/
+  │   │   │   ├── NightAdventures/
+  │   │   │   │   ├── NightDuneBuggy.xaml
+  │   │   │   │   └── StarGazing.xaml
+  │   │   │   ├── OasisFun/
+  │   │   │   │   ├── CamelRides.xaml
+  │   │   │   │   └── OasisPools.xaml
+  │   │   ├── Frozen/
+  │   │   │   ├── IcyTreats/
+  │   │   │   │   ├── FrozenDrinksBar.xaml
+  │   │   │   │   └── IceCreamWorld.xaml
+  │   │   │   ├── SnowActivities/
+  │   │   │   │   ├── IceSculptures.xaml
+  │   │   │   │   └── Snowboarding.xaml
+  │   │   ├── TropicalParadise/
+  │   │   │   ├── BeachAttractions/
+  │   │   │   │   ├── SurfLessons.xaml
+  │   │   │   │   └── WavePool.xaml
+  │   │   │   ├── JungleAdventures/
+  │   │   │   │   ├── AnimalShows.xaml
+  │   │   │   │   └── ZipLines.xaml
+  │   │   ├── AppShell.xaml
+  │   │   ├── AppShellTabs.xaml
+  │   │   ├── FeaturedView.xaml
+  │   │   ├── OffersView.xaml
+  │   │   ├── SearchView.xaml
+  │   │   └── TemplateView.xaml
+  │   ├── ViewModels/
+  │   │   ├── FeaturedViewModel.cs
+  │   │   ├── OffersViewModel.cs
+  │   │   └── PlacesViewModel.cs
+  ├── Platforms/
+  ├── Resources/
+  ├── Search/
+  │   └── OffersSearchHandler.cs
+  ├── Utilities/
+  │   ├── IconFont.cs
+  │   └── Utils.cs
+  └── Services/
+      └── OffersService.cs
+
+```
+---
+
 ## 🛠 Development Environment Setup
 
 ```markdown
@@ -37,6 +94,7 @@ Required Tools:
 - Android/iOS SDKs (for mobile development)
 ```
 ---
+
 ## 📝 Nuget Package
 ```markdown
 - AcrylicView.Maui
@@ -44,3 +102,5 @@ Required Tools:
 - SkiaSharp.Extended.UI.Maui
 ```
 ---
+
+# ⭐️ Analysis of
