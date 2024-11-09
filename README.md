@@ -97,9 +97,7 @@ Required Tools:
 
 ## 📝 Nuget Package
 ```markdown
-- AcrylicView.Maui
-- CardsView.Maui
-- SkiaSharp.Extended.UI.Maui
+- CommunityToolkit.Mvvm
 ```
 ---
 
