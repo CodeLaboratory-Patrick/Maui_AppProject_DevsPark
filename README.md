@@ -873,3 +873,179 @@ This approach allows deep linking to specific views, making the navigation flow 
 For more information about using Tabs in .NET MAUI, you can refer to the following official documentation and guides:
 
 1. [.NET MAUI Shell Tabs](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/shell/tabs?view=net-maui-8.0) 
+---
+## 🎯 .Net Maui Code : [ObservableProperty] and [RelayCommand] - Analysis and Detailed Explanation
+
+### Overview
+In .NET MAUI, **MVVM (Model-View-ViewModel)** is a widely adopted design pattern that helps separate the business logic from the UI components. To facilitate easier implementation of MVVM, `.NET Community Toolkit MVVM` provides powerful attributes like `[ObservableProperty]` and `[RelayCommand]`. These attributes simplify the creation of properties and commands, which are essential components for data binding between the ViewModel and View.
+
+- **`[ObservableProperty]`**: This attribute simplifies the process of creating observable properties, meaning you do not need to manually implement `INotifyPropertyChanged` for each property.
+- **`[RelayCommand]`**: This attribute helps to create commands that can be bound to user interactions (such as button clicks) without the boilerplate code needed for `ICommand` implementation.
+
+These features drastically reduce boilerplate code, make the codebase more readable, and allow for a more concise implementation of the MVVM pattern.
+
+### Key Features of [ObservableProperty] and [RelayCommand]
+1. **Reduced Boilerplate Code**: Automatically generates properties with notification capabilities and commands without manually implementing interfaces like `INotifyPropertyChanged` or `ICommand`.
+2. **Easy Binding**: Supports easy data binding between the ViewModel and UI, improving productivity and maintainability.
+3. **Readability**: Makes ViewModel code more concise, which makes it easier to understand and maintain.
+4. **Command Parameter Support**: `[RelayCommand]` allows command parameters, providing flexibility to pass data from the View to the ViewModel.
+
+### Example Usage
+#### 1. [ObservableProperty] Example
+Let's start by analyzing a scenario where `[ObservableProperty]` can be used to simplify a ViewModel.
+
+##### Traditional ViewModel Property Implementation
+In a traditional MVVM pattern, observable properties are implemented like this:
+
+```csharp
+public class MyViewModel : INotifyPropertyChanged
+{
+    private string name;
+
+    public string Name
+    {
+        get => name;
+        set
+        {
+            if (name != value)
+            {
+                name = value;
+                OnPropertyChanged();
+            }
+        }
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+}
+```
+
+##### Using [ObservableProperty]
+With `[ObservableProperty]`, the above code can be drastically simplified:
+
+```csharp
+using CommunityToolkit.Mvvm.ComponentModel;
+
+public partial class MyViewModel : ObservableObject
+{
+    [ObservableProperty]
+    private string name;
+}
+```
+
+- **`[ObservableProperty]`**: This attribute generates the `Name` property, including the backing field, getter/setter, and notification logic automatically. It ensures that the UI is notified when the property changes.
+- **`ObservableObject`**: The `MyViewModel` class extends `ObservableObject`, which provides the necessary implementation for `INotifyPropertyChanged`.
+
+##### How It Works Internally
+`[ObservableProperty]` automatically generates the public property `Name` and the `OnPropertyChanged` event calls. This helps to reduce redundancy and focuses on the business logic rather than boilerplate code.
+
+### 2. [RelayCommand] Example
+Commands are used in MVVM to handle actions triggered by the user, such as clicking a button.
+
+##### Traditional Command Implementation
+Traditionally, creating a command would look like this:
+
+```csharp
+public class MyViewModel
+{
+    public ICommand SubmitCommand { get; }
+
+    public MyViewModel()
+    {
+        SubmitCommand = new Command(OnSubmit);
+    }
+
+    private void OnSubmit()
+    {
+        // Business logic here
+    }
+}
+```
+
+##### Using [RelayCommand]
+With `[RelayCommand]`, the above implementation can be simplified as follows:
+
+```csharp
+using CommunityToolkit.Mvvm.Input;
+
+public partial class MyViewModel
+{
+    [RelayCommand]
+    private void Submit()
+    {
+        // Business logic here
+    }
+}
+```
+
+- **`[RelayCommand]`**: This attribute automatically creates an `ICommand` property named `SubmitCommand`, which can be used for data binding to a button or other interactive control.
+- **Simplified Command Logic**: You don’t need to manually create an instance of `ICommand` or initialize it in the constructor—`[RelayCommand]` does that for you.
+
+##### Example Usage in XAML
+In a .NET MAUI XAML page, you could bind a button click to this command as follows:
+
+```xml
+<Button Text="Submit" Command="{Binding SubmitCommand}" />
+```
+The `[RelayCommand]` automatically generates a `SubmitCommand` property, which can then be bound to UI elements in XAML like buttons.
+
+### Properties and Customization
+Here is a table summarizing key attributes and properties used in `[ObservableProperty]` and `[RelayCommand]`:
+
+| Attribute Name         | Purpose                          | Description                                                                                      |
+|------------------------|----------------------------------|--------------------------------------------------------------------------------------------------|
+| `[ObservableProperty]` | Creates Observable Property      | Automatically generates backing fields, getters/setters, and change notifications.               |
+| `[RelayCommand]`       | Creates ICommand Implementation | Generates an `ICommand`-based property for binding UI actions to ViewModel methods.              |
+| `CanExecute`           | RelayCommand Conditional Logic  | Can be used to enable or disable commands based on conditions in the ViewModel.                  |
+
+### Advanced Usage with Parameters
+Both `[RelayCommand]` and `[ObservableProperty]` support more advanced functionality:
+- **Command Parameters**: `[RelayCommand]` can be used with parameters, which allows passing data from UI elements directly to the command handler in the ViewModel.
+
+For example, suppose you want to handle a button click that requires a specific item as a parameter:
+
+```csharp
+[RelayCommand]
+private void SelectItem(ItemModel item)
+{
+    // Handle item selection
+}
+```
+
+You can bind the command in XAML like this:
+
+```xml
+<Button Text="Select Item" Command="{Binding SelectItemCommand}" CommandParameter="{Binding SelectedItem}" />
+```
+In this example, the `SelectedItem` will be passed to the `SelectItem` method when the button is clicked.
+
+### Diagram Representation
+Here’s a visual diagram to represent the flow of data between `[ObservableProperty]`, `[RelayCommand]`, and the UI:
+
+```
+[ObservableProperty]
+    ↓
+Property Changed Notification
+    ↓
+View Updates ↔ Data Binding ↔ ViewModel
+    ↑
+ [RelayCommand]
+    ↓
+User Interaction (e.g., Button Click)
+```
+
+### Summary
+- **`[ObservableProperty]`**: Use this attribute to quickly create properties that notify the UI of changes without manually implementing `INotifyPropertyChanged`.
+- **`[RelayCommand]`**: Use this attribute to easily create commands for user interactions, reducing the need for boilerplate `ICommand` implementations.
+- **Saves Time**: These attributes significantly reduce the amount of boilerplate code you need to write, making ViewModel classes much cleaner and easier to maintain.
+
+### Additional Resources
+To learn more about `[ObservableProperty]`, `[RelayCommand]`, and other related attributes, you can refer to the following resources:
+
+1. [.NET Community Toolkit MVVM Documentation](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/) - Official documentation covering all features of the Community Toolkit MVVM.
+2. [Data Binding in .NET MAUI](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/data-binding/?view=net-maui-8.0) - Learn about data binding fundamentals in .NET MAUI, which are closely related to observable properties and commands.
+3. [MVVM Pattern in .NET MAUI](https://learn.microsoft.com/en-us/dotnet/architecture/maui/mvvm) - Detailed overview of the MVVM pattern in .NET MAUI, including ViewModel best practices and command implementation.
