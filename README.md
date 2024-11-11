@@ -99,9 +99,9 @@ Required Tools:
 ```markdown
 - CommunityToolkit.Mvvm
 ```
----
 
-# ⭐️ Analysis of .NET MAUI: Shell.xaml, App.xaml, and MainPage.xaml
+---
+## ⭐️ Analysis of .NET MAUI: Shell.xaml, App.xaml, and MainPage.xaml
 
 In a .NET MAUI (Multi-platform App UI) application, Shell.xaml, App.xaml, and MainPage.xaml play distinct roles that help define the structure and behavior of the application. These files have different responsibilities within a MAUI project, and understanding their roles will enable you to effectively build multi-platform apps. Below is an in-depth analysis of each, including examples, usage scenarios, and key features.
 
@@ -203,7 +203,7 @@ To learn more about each of these files in detail, consider visiting the followi
 - [.NET MAUI ContentPage Documentation](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/pages/contentpage): Official guide to ContentPage, which includes MainPage.xaml.
 
 ---
-# ⭐️ Analysis of AppShell.xaml and Detailed Explanation
+## ⭐️ Analysis of AppShell.xaml and Detailed Explanation
 
 This XAML file (`AppShell.xaml`) represents a foundational component of a .NET MAUI (Multi-platform App UI) application. It defines the visual structure and navigation of the application's Shell, which is used to organize and manage different pages effectively. Here is a detailed analysis of the features, properties, and overall structure used in this XAML file, followed by an explanation of each individual property in a table format.
 
@@ -297,8 +297,9 @@ To gain more insight into using Shell in .NET MAUI, you can check the following 
 1. [Microsoft .NET MAUI Shell Documentation](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/shell/) - Detailed overview of using Shell, properties, and customization.
 2. [XAML Documentation](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/xaml/?view=netdesktop-9.0) - Understanding XAML structure and syntax.
 3. [Shell Navigation in MAUI](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/shell/navigation) - Best practices for managing navigation using Shell.
+
 ---
-# ⭐️ Analysis of AppShellTabs.xaml and Detailed Explanation
+## ⭐️ Analysis of AppShellTabs.xaml and Detailed Explanation
 
 The `AppShellTabs.xaml` file defines the visual structure of a .NET MAUI application using tabs to organize and navigate different sections of the application. This file uses the `<Shell>` element to create a tab-based interface, providing users an intuitive way to access different features or views. Below, we'll analyze the structure, properties, and features used in this XAML file, and explain their functionality in detail.
 
@@ -406,8 +407,9 @@ To learn more about Shell, TabBar, and XAML in .NET MAUI, you can refer to the f
 1. [Microsoft .NET MAUI Shell Documentation](https://learn.microsoft.com/en-us/dotnet/maui/fundamentals/shell/?view=net-maui-8.0) - Comprehensive information on using Shell in .NET MAUI.
 2. [XAML Tabbed Navigation in MAUI](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.platformconfiguration.macosspecific.tabbedpage?view=net-maui-8.0) - Guide to creating and using tabbed navigation within MAUI.
 3. [XAML Overview](https://learn.microsoft.com/en-us/visualstudio/xaml-tools/xaml-overview?view=vs-2022) - To understand the syntax and features of XAML used in UI development.
+
 ---
-# ⭐️ Analysis of FeaturedView.xaml, SearchView.xaml, and TemplateView.xaml
+## ⭐️ Analysis of FeaturedView.xaml, SearchView.xaml, and TemplateView.xaml
 
 The three XAML files define different parts of a .NET MAUI application: `FeaturedView.xaml`, `SearchView.xaml`, and `TemplateView.xaml`. Each of these files plays an important role in presenting content and enhancing user experience in the application. Below, I will provide a comprehensive analysis of each file, including the properties, features, and example usage.
 
